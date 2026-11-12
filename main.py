@@ -25,10 +25,13 @@ def home():
 
 
 # Health check endpoint
+# @app.get("/health")
+# def health():
+#     return {"status": "healthy"}
+
 @app.get("/health")
 def health():
-    return {"status": "healthy"}
-
+    return {"status": "unhealthy"}
 
 # Create a task
 @app.post("/tasks", status_code=201)
